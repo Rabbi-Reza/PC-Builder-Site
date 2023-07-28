@@ -29,9 +29,6 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
-            </li>
-            <li>
               <a>Parent</a>
               <ul className="p-2">
                 <li>
@@ -42,22 +39,21 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/pc-builder"
+            >
+              {/* <a className="btn btn-info">Login</a> */}
+              <items className="btn btn-info">PC Builder</items>
+            </Link>
           </ul>
         </div>
         <Link style={{ textDecoration: "none", color: "white" }} href="/">
-          <items className="btn btn-ghost normal-case text-xl">
-            PC Builder
-          </items>
+          <items className="btn btn-ghost normal-case text-xl">Build</items>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
           <li tabIndex={0}>
             <details>
               <summary>Parent</summary>
@@ -71,9 +67,14 @@ const Navbar = () => {
               </ul>
             </details>
           </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            href="/pc-builder"
+          >
+            {/* <a className="btn btn-info">Login</a> */}
+            <items className="btn btn-info">PC Builder</items>
+          </Link>
         </ul>
       </div>
       <div className="navbar-end">
@@ -87,7 +88,7 @@ const Navbar = () => {
             href="/login"
           >
             {/* <a className="btn btn-info">Login</a> */}
-            <items className="btn btn-info">Login</items>
+            <items className="btn btn-accent">Login</items>
           </Link>
         )}
       </div>
