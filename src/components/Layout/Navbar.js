@@ -29,13 +29,63 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Parent</a>
-              <ul className="p-2">
+              <a>All Categories</a>
+              <ul className="p-2 text-black">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/processor"
+                  >
+                    <items>CPU / Processor</items>
+                  </Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/motherboard"
+                  >
+                    <items>Motherboard</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/ram"
+                  >
+                    <items>RAM</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/psu"
+                  >
+                    <items>Power Supply Unit</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/storage"
+                  >
+                    <items>Storage Device</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/monitor"
+                  >
+                    <items>Monitor</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/others"
+                  >
+                    <items>Others</items>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -49,20 +99,72 @@ const Navbar = () => {
           </ul>
         </div>
         <Link style={{ textDecoration: "none", color: "white" }} href="/">
-          <items className="btn btn-ghost normal-case text-xl">Build</items>
+          <items className="btn btn-ghost normal-case text-xl">
+            Build Dream PC
+          </items>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li tabIndex={0}>
             <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
+              <summary>All Categories</summary>
+              <ul className="p-2 text-black">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/processor"
+                  >
+                    <items>CPU / Processor</items>
+                  </Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/motherboard"
+                  >
+                    <items>Motherboard</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/ram"
+                  >
+                    <items>RAM</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/psu"
+                  >
+                    <items>Power Supply Unit</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/storage"
+                  >
+                    <items>Storage Device</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/monitor"
+                  >
+                    <items>Monitor</items>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href="/categories/others"
+                  >
+                    <items>Others</items>
+                  </Link>
                 </li>
               </ul>
             </details>
@@ -79,9 +181,31 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {session?.user ? (
-          <items onClick={() => signOut()} className="btn btn-info">
-            Logout
-          </items>
+          <>
+            <p>
+              <span
+                style={{
+                  textDecoration: "none",
+                  color: "#FFFFF7",
+                }}
+              >
+                Welcome,
+              </span>{" "}
+              <span
+                style={{
+                  textDecoration: "none",
+                  color: "#7ac2af",
+                  marginRight: "10px",
+                  fontWeight: '600'
+                }}
+              >
+                {session?.user?.name}
+              </span>{" "}
+            </p>{" "}
+            <items onClick={() => signOut()} className="btn btn-info">
+              Logout
+            </items>
+          </>
         ) : (
           <Link
             style={{ textDecoration: "none", color: "white" }}
