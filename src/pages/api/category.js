@@ -1,6 +1,5 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri =
-  "mongodb+srv://university-admin:PLNYV9AVOM3mv8qq@food-app.gjb98.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@food-app.gjb98.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -15,7 +14,9 @@ async function run(req, res) {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
-    const categoriesCollection = client.db("pc-builder").collection("categories");
+    const categoriesCollection = client
+      .db("pc-builder")
+      .collection("categories");
 
     if (req.method === "GET") {
       const categories = await categoriesCollection.find({}).toArray();
