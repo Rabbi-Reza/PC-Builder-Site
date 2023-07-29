@@ -1,0 +1,7 @@
+.display_container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  grid-gap: 10px; /* Add some space between items */
+  /* max-width: 600px;  */
+  margin: 0 auto; /* Center the container horizontally */
+}

@@ -1,12 +1,13 @@
 import FeaturedCategories from "@/components/UI/FeaturedCategories";
-import PCComponents from "@/components/UI/PCcomponents";
+import PCComponents from "@/components/UI/PCComponents";
 
-const HomePage = ({ allCategories }) => {
-  console.log('allCategories',allCategories)
+const HomePage = ({ allCategories, allProducts }) => {
+  // console.log("allCategories", allCategories);
+  console.log("allProducts1 ", allProducts);
   return (
     <div>
-      <PCComponents/>
-      <FeaturedCategories allCategories={allCategories}/>
+      <PCComponents allProducts={allProducts} />
+      <FeaturedCategories allCategories={allCategories} />
     </div>
   );
 };
@@ -17,9 +18,13 @@ export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/category");
   const data = await res.json();
 
+  const productData = await fetch("http://localhost:3000/api/product");
+  const products = await productData.json();
+
   return {
     props: {
       allCategories: data,
+      allProducts: products,
     },
     revalidate: 30,
   };
