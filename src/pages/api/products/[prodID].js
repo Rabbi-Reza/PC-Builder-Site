@@ -29,7 +29,7 @@ async function run(req, res) {
     }
   } finally {
     // Make sure to close the connection after the operation is done
-    await client.close();
+    // await client.close();
   }
 }
 
