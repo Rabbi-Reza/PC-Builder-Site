@@ -14,7 +14,7 @@ const FeaturedCategories = ({ allCategories }) => {
                 <div className="card-actions justify-end">
                   <Link
                     style={{ textDecoration: "none", color: "white" }}
-                    href={`/categories/${dt?.link}`}
+                    href={`/categories/${dt?.id}`}
                   >
                     <button className="btn btn-primary">Visit Products</button>
                   </Link>

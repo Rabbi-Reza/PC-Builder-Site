@@ -113,7 +113,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/processor"
+                    href="/categories/1"
                   >
                     <items>CPU / Processor</items>
                   </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/motherboard"
+                    href="/categories/2"
                   >
                     <items>Motherboard</items>
                   </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/ram"
+                    href="/categories/3"
                   >
                     <items>RAM</items>
                   </Link>
@@ -137,7 +137,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/psu"
+                    href="/categories/4"
                   >
                     <items>Power Supply Unit</items>
                   </Link>
@@ -145,7 +145,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/storage"
+                    href="/categories/5"
                   >
                     <items>Storage Device</items>
                   </Link>
@@ -153,7 +153,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/monitor"
+                    href="/categories/6"
                   >
                     <items>Monitor</items>
                   </Link>
@@ -161,7 +161,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
-                    href="/categories/others"
+                    href="/categories/7"
                   >
                     <items>Others</items>
                   </Link>
