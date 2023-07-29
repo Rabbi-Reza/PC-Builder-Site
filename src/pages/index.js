@@ -1,8 +1,12 @@
+import FeaturedCategories from "@/components/UI/FeaturedCategories";
+import PCComponents from "@/components/UI/PCcomponents";
+
 const HomePage = ({ allCategories }) => {
   console.log('allCategories',allCategories)
   return (
     <div>
-      <h1>This is home page</h1>
+      <PCComponents/>
+      <FeaturedCategories allCategories={allCategories}/>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const Navbar = () => {
           >
             <li>
               <a>All Categories</a>
-              <ul className="p-2 text-black">
+              <ul className="p-2">
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
@@ -109,7 +109,7 @@ const Navbar = () => {
           <li tabIndex={0}>
             <details>
               <summary>All Categories</summary>
-              <ul className="p-2 text-black">
+              <ul className="p-">
                 <li>
                   <Link
                     style={{ textDecoration: "none" }}
