@@ -13,10 +13,19 @@ const HomePage = ({ allCategories, allProducts }) => {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://pc-builder-site.vercel.app/api/category");
+  if(typeof window === "undefined") {
+    return {
+      props: {
+        allCategories: [],
+        allProducts: []
+      }
+    }
+  }
+
+  const res = await fetch(`${process.env.URL}api/category`);
   const data = await res.json();
 
-  const productData = await fetch("https://pc-builder-site.vercel.app/api/product");
+  const productData = await fetch(`${process.env.URL}/api/product`);
   const products = await productData.json();
 
   return {

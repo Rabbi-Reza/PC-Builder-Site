@@ -1,8 +1,7 @@
- # PC Builder Website Assignment
+# PC Builder Website Assignment
 
 ## Live link
-### Live deployed [Link](https://pc-builder-site.vercel.app/) 
-[https://pc-builder-site.vercel.app/](https://pc-builder-site.vercel.app/) 
 
+### Live deployed [Link](http://localhost:3000/)
 
-
+[http://localhost:3000/](http://localhost:3000/)

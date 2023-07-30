@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import styles from "@/styles/CategoryPage.module.css";
+import Link from "next/link";
 
 const CategoryPage = ({ catProd }) => {
-
   return (
     <div>
       {" "}
@@ -41,7 +40,7 @@ const CategoryPage = ({ catProd }) => {
 export default CategoryPage;
 
 export const getStaticPaths = async () => {
-  const res = await fetch("https://pc-builder-site.vercel.app/api/category");
+  const res = await fetch(`${process.env.URL}/api/category`);
   const categories = await res.json();
   const paths = categories.data.map((post) => ({
     params: { cid: post.id },
@@ -53,7 +52,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
 
-  const res = await fetch(`https://pc-builder-site.vercel.app/api/categories/${params.cid}`);
+  const res = await fetch(`${process.env.URL}/api/categories/${params.cid}`);
   const data = await res.json();
 
   return {
