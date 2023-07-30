@@ -5,7 +5,7 @@ const ProductDetails = ({ singleProduct }) => {
 export default ProductDetails;
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/product");
+  const res = await fetch("https://pc-builder-site.vercel.app/api/product");
   const categories = await res.json();
   const paths = categories.data.map((post) => ({
     params: { pid: post._id },
@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
 
-  const res = await fetch(`http://localhost:3000/api/products/${params.pid}`);
+  const res = await fetch(`https://pc-builder-site.vercel.app/api/products/${params.pid}`);
   const data = await res.json();
 
   return {

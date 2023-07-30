@@ -7,7 +7,7 @@ const initialState = {
 // Define our single API slice object
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://pc-builder-site.vercel.app/api" }),
   endpoints: (builder) => ({
     getNewses: builder.query({
       query: () => "/products",

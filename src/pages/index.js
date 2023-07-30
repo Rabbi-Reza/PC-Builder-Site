@@ -13,10 +13,10 @@ const HomePage = ({ allCategories, allProducts }) => {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/category");
+  const res = await fetch("https://pc-builder-site.vercel.app/api/category");
   const data = await res.json();
 
-  const productData = await fetch("http://localhost:3000/api/product");
+  const productData = await fetch("https://pc-builder-site.vercel.app/api/product");
   const products = await productData.json();
 
   return {

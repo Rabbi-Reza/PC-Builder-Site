@@ -56,7 +56,7 @@ export const getServerSideProps = async (context) => {
   const { params } = context;
   // const res = await fetch("http://localhost:5000/news");
   const res = await fetch(
-    `http://localhost:3000/api/categories/${params.selProd}`
+    `https://pc-builder-site.vercel.app/api/categories/${params.selProd}`
   );
   const data = await res.json();
 

@@ -161,7 +161,7 @@ const PCBuilderHomePage = ({ allCats }) => {
 export default PCBuilderHomePage;
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:3000/api/category");
+  const res = await fetch("https://pc-builder-site.vercel.app/api/category");
   const data = await res.json();
 
   return {
