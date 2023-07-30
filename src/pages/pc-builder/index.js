@@ -14,7 +14,7 @@ const PCBuilderHomePage = ({ allCats }) => {
                   style={{ textDecoration: "none", color: "white" }}
                   href={`/pc-builder/${dt?.id}`}
                 >
-                  <button className="btn btn-primary">Add Product</button>
+                  <button className="btn btn-primary">Choose/Select</button>
                 </Link>
               </div>
             </div>

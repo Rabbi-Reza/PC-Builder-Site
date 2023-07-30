@@ -26,7 +26,7 @@ const SelectProductPage = ({ allProducts }) => {
                   style={{ textDecoration: "none", color: "white" }}
                   href={`/pc-builder/${dt?._id}`}
                 >
-                  <button className="btn btn-primary">Add To PC Build</button>
+                  <button className="btn btn-primary">Add To Builder</button>
                 </Link>
               </div>
             </div>
