@@ -7,7 +7,7 @@ const initialState = {
 // Define our single API slice object
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.URL}/api` }),
+  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.URL}` }),
   endpoints: (builder) => ({
     getNewses: builder.query({
       query: () => "/products",

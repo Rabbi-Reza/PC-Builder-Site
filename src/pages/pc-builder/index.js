@@ -161,15 +161,15 @@ const PCBuilderHomePage = ({ allCats }) => {
 export default PCBuilderHomePage;
 
 export const getServerSideProps = async () => {
-  if(typeof window === "undefined") {
-    return {
-      props: {
-        allCats: []
-      }
-    }
-  }
+  // if(typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       allCats: []
+  //     }
+  //   }
+  // }
 
-  const res = await fetch(`${process.env.URL}/api/category`);
+  const res = await fetch(`${process.env.URL}/category`);
   const data = await res.json();
 
   return {

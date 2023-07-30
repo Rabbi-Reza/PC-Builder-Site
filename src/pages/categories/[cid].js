@@ -40,7 +40,7 @@ const CategoryPage = ({ catProd }) => {
 export default CategoryPage;
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.URL}/api/category`);
+  const res = await fetch(`${process.env.URL}/category`);
   const categories = await res.json();
   const paths = categories.data.map((post) => ({
     params: { cid: post.id },
@@ -52,7 +52,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
 
-  const res = await fetch(`${process.env.URL}/api/categories/${params.cid}`);
+  const res = await fetch(`${process.env.URL}/categories/${params.cid}`);
   const data = await res.json();
 
   return {

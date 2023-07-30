@@ -53,18 +53,18 @@ const SelectProductPage = ({ allProducts }) => {
 export default SelectProductPage;
 
 export const getServerSideProps = async (context) => {
-  if(typeof window === "undefined") {
-    return {
-      props: {
-        allProducts: []
-      }
-    }
-  }
+  // if(typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       allProducts: []
+  //     }
+  //   }
+  // }
 
   const { params } = context;
   // const res = await fetch("http://localhost:5000/news");
   const res = await fetch(
-    `${process.env.URL}/api/categories/${params.selProd}`
+    `${process.env.URL}/categories/${params.selProd}`
   );
   const data = await res.json();
 
