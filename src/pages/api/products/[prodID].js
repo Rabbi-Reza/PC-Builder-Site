@@ -9,7 +9,6 @@ const client = new MongoClient(uri, {
   },
 });
 async function run(req, res) {
-  console.log(req.query.prodID);
   try {
     // Connect the client to the server (optional starting in v4.7)
     await client.connect();

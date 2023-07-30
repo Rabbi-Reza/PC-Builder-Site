@@ -2,8 +2,6 @@ import FeaturedCategories from "@/components/UI/FeaturedCategories";
 import PCComponents from "@/components/UI/PCComponents";
 
 const HomePage = ({ allCategories, allProducts }) => {
-  // console.log("allCategories", allCategories);
-  console.log("allProducts1 ", allProducts);
   return (
     <div>
       <PCComponents allProducts={allProducts} />

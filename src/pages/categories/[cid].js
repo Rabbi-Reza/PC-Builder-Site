@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "@/styles/CategoryPage.module.css";
 
 const CategoryPage = ({ catProd }) => {
-  console.log("catProd", catProd.data);
 
   return (
     <div>
@@ -53,8 +52,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-
-  console.log("params.catId", params);
 
   const res = await fetch(`http://localhost:3000/api/categories/${params.cid}`);
   const data = await res.json();

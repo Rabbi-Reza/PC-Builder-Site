@@ -5,12 +5,9 @@ import Head from "next/head";
 import { useForm } from "react-hook-form";
 
 const LoginPage = () => {
-//   console.log(user);
-
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    // console.log(data);
     createUserWithEmailAndPassword(data.email, data.password);
   };
 

@@ -1,5 +1,4 @@
 const ProductDetails = ({ singleProduct }) => {
-  console.log("singleProduct", singleProduct?.data[0]);
   return <div>ProductDetails</div>;
 };
 
@@ -17,8 +16,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-
-  console.log("params.catId", params);
 
   const res = await fetch(`http://localhost:3000/api/products/${params.pid}`);
   const data = await res.json();

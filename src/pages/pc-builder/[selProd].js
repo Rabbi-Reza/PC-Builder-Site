@@ -1,8 +1,15 @@
-import Link from "next/link";
+import { addToBuildList } from "@/redux/features/productsBuild/productsBuildSlice";
 import styles from "@/styles/PCBuilderAdd.module.css";
+import Link from "next/link";
+import { useDispatch } from "react-redux";
 
 const SelectProductPage = ({ allProducts }) => {
-  console.log("allProducts", allProducts);
+  const dispatch = useDispatch();
+
+  const handleAddProduct = (product) => {
+    dispatch(addToBuildList(product));
+  };
+
   return (
     <div className={styles.display_container}>
       {allProducts?.data?.map((dt, i) => (
@@ -19,14 +26,20 @@ const SelectProductPage = ({ allProducts }) => {
                 <div className="badge badge-outline">{dt?.status}</div>
               </div>
               <div className="">
-              {dt?.averageRating}<input className="mask mask-star-2 bg-green-500"/>
+                {dt?.averageRating}
+                <input className="mask mask-star-2 bg-green-500" />
               </div>
               <div className="card-actions justify-start">
                 <Link
                   style={{ textDecoration: "none", color: "white" }}
-                  href={`/pc-builder/${dt?._id}`}
+                  href={`/pc-builder`}
                 >
-                  <button className="btn btn-primary">Add To Builder</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => handleAddProduct(dt)}
+                  >
+                    Add To Builder
+                  </button>
                 </Link>
               </div>
             </div>
@@ -46,7 +59,6 @@ export const getServerSideProps = async (context) => {
     `http://localhost:3000/api/categories/${params.selProd}`
   );
   const data = await res.json();
-  // console.log(data);
 
   return {
     props: {
