@@ -2,6 +2,6 @@
 
 ## Live link
 
-### Live deployed [Link](http://localhost:3000/)
+### Live deployed [Link](https://pc-builder-site.vercel.app/)
 
-[http://localhost:3000/](http://localhost:3000/)
+[https://pc-builder-site.vercel.app/](https://pc-builder-site.vercel.app/)

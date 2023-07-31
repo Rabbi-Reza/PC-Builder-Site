@@ -53,9 +53,17 @@ const productsBuildSlice = createSlice({
         state.productMonitor = [];
       }
     },
+    removeAllFromBuildList: (state, action) => {
+        state.productCPU = [];
+        state.productMotherboard = [];
+        state.productRAM = [];
+        state.productPSU = [];
+        state.productStorage = [];
+        state.productMonitor = [];
+    },
   },
 });
 
-export const { addToBuildList, removeFromBuildList } = productsBuildSlice.actions;
+export const { addToBuildList, removeFromBuildList, removeAllFromBuildList } = productsBuildSlice.actions;
 
 export default productsBuildSlice.reducer;
